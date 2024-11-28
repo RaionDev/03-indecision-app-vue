@@ -4,7 +4,7 @@
       <span>Mi esposa</span>
     </div>
 
-    <ChatMessages />
+    <ChatMessages :messages="messages"/>
 
     <MessageBox />
 
@@ -21,6 +21,11 @@ const messages = ref<ChatMessage[]>([
   {
     id: new Date().getTime(),
     message: 'Hola mundo',
+    itsMine: true
+  },
+  {
+    id: new Date().getTime(),
+    message: 'Quieres tomar cafe?',
     itsMine: true
   },
   {
